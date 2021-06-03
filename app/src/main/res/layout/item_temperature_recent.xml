@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="145dp"
+    android:layout_height="122dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/bg_solid_blue_accent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_lens" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginStart="18sp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/gray"
+            android:text="Moscow" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/temp"
+            android:layout_width="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="30" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:text="16 July 2012" />
+
+    </LinearLayout>
+
+</LinearLayout>
