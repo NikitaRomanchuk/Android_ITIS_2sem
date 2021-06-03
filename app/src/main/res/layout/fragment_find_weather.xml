@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".presentation.ui.weather.FindWeatherFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/purple"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Choose a City" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Select a city or country to\nsee the weather" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/find_lat_long_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="14dp"
+        android:padding="18dp"
+        android:text="Get weather with GPS"
+        android:textAllCaps="false"
+        android:textColor="@color/purple"
+        android:textAlignment="textStart"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/ic_right"
+        app:iconGravity="end"
+        app:iconTint="@color/purple"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/findCityButton"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="35dp"
+        android:padding="18dp"
+        android:text="Find your City"
+        android:textAllCaps="false"
+        android:textColor="@color/purple"
+        android:textAlignment="textStart"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/ic_right"
+        app:iconGravity="end"
+        app:iconTint="@color/purple"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:listitem="@layout/item_temperature"/>
+
+</LinearLayout>

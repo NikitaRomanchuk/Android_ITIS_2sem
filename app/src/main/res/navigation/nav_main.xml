@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/findWeatherFragment">
+
+    <fragment
+        android:id="@+id/findWeatherFragment"
+        android:name="com.itis.weather.presentation.ui.weather.FindWeatherFragment"
+        tools:layout="@layout/fragment_find_weather" >
+        <action
+            android:id="@+id/action_findWeatherFragment_to_weatherDetailFragment"
+            app:destination="@id/weatherDetailFragment" />
+        <action
+            android:id="@+id/action_findWeatherFragment_to_inputCityBottomSheetFragment"
+            app:destination="@id/inputCityBottomSheetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherDetailFragment"
+        android:name="com.itis.weather.presentation.ui.weather.WeatherDetailFragment"
+        tools:layout="@layout/fragment_weather_detail" >
+        <argument
+            app:argType="integer"
+            android:name="id_weather" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/inputCityBottomSheetFragment"
+        android:name="com.itis.weather.presentation.ui.weather.InputCityBottomSheetFragment"
+        android:label="fragment_input_city_bottom_sheet"
+        tools:layout="@layout/fragment_input_city_bottom_sheet" />
+
+
+</navigation>
